@@ -1,10 +1,12 @@
 <?php
 require 'DB/dbconnect.php';
+require 'DB/bookingSQL.php';
+
 
 
 
 ?>
-<!DOCTYPE html>
+
 <html>
 
 
@@ -18,6 +20,8 @@ require 'DB/dbconnect.php';
 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+
+
 
 </head>
 
@@ -76,16 +80,15 @@ require 'DB/dbconnect.php';
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Book The Anne Frank</h1>
-                <p class="lead">Insert your details to book the meeting room in advance</p>
-
+         <p>Thank you, <?=$_POST['name']?>!</p>
+          <p>you have booked the Meeting room for <?=$_POST['time1']?>, on <?=$_POST['date1']?>.</p>
             </div>
         </div>
         <!-- /.row -->
+
 
 
     <!-- /.container -->
@@ -95,59 +98,5 @@ require 'DB/dbconnect.php';
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-<br />
-<div class="inner contact">
-                <!-- Form Area -->
-                <div class="contact-form" align="center">
-                    <!-- Form -->
-                    <form id="contact-us" method="post" action="formAction.php">
-                        <!-- Left Inputs -->
-                        <div class="wow animated slideInLeft" data-wow-delay=".5s">
-                            <!-- Name -->
-
-                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name">
-
-                            <!-- Email -->
-                            <input type="email" name="email" id="mail" required="required" class="form" placeholder="Email">
-                            <!-- Subject -->
-                            <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject">
-
-                            <input type="date" name="date1" id="date" required="required" class="form">
-
-                            <input type="time" name="time1" id="time" required="required" class="form">
-
-                        </div><!-- End Left Inputs -->
-
-                        <!-- Right Inputs -->
-                        <div class="wow animated slideInRight" data-wow-delay=".5s">
-                            <!-- Message -->
-                            <textarea name="message" id="message" class="form textarea"  placeholder="Message" align="center"></textarea>
-                        </div><!-- End Right Inputs -->
-                        <br>
-                        <br>
-                        <!-- Bottom Submit -->
-                        <div class="relative fullwidth col-xs-12">
-                            <!-- Send Button -->
-                        <!--  <button type="submit" id="submit" name="submit" >Send</button> -->
-                        <button type="submit" id="submit" name="submit" class="form-btn semibold"> Send Message </button>
-
-                        <br />
-                        </div><!-- End Bottom Submit -->
-                        <!-- Clear -->
-                        <div class="clear"></div>
-                    </form>
-
-
-
-
-                </div><!-- End Contact Form Area -->
-            </div><!-- End Inner -->
-          </div>
-
-
-
-
-
 </body>
 </html>

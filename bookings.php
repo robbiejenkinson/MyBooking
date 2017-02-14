@@ -1,10 +1,12 @@
 <?php
 
-require 'DB/dbconnect.php';
+require 'DB/index.php';
 require 'DB/bookingSQL.php';
 
 
  ?>
+
+
 
  <!DOCTYPE html>
  <html>
@@ -20,6 +22,8 @@ require 'DB/bookingSQL.php';
 
      <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="css/index.css">
+
+
 
  </head>
 
@@ -81,8 +85,7 @@ require 'DB/bookingSQL.php';
 
          <div class="row">
              <div class="col-lg-12 text-center">
-           <p>Thank you, <?=$_POST['name']?>!</p>
-           <p>you have booked the Meeting room for <?=$_POST['time1']?>, on <?=$_POST['date1']?>.</p>
+
              </div>
          </div>
          <!-- /.row -->
