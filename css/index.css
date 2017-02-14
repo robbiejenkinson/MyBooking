@@ -2,6 +2,7 @@
    padding:10px 0 10px;
  }
 
+
  .contact-text{
    margin:45px auto;
  }
@@ -111,6 +112,10 @@
    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
  }
 
+.dataTables_length{
+  text-align: center;
+}
+
  .form-btn:hover{
    background:#111;
    color: white;
@@ -126,4 +131,9 @@ center{
 input {
    position: relative;
    z-index: 9999;
+}
+
+.table{
+  text-align: center;
+  width:80%;
 }
