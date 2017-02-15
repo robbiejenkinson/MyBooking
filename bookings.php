@@ -30,38 +30,61 @@ require 'DB/bookingSQL.php';
     <![endif]-->
   </head>
   <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">TheMeetingRoom</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li>
+                        <a href="bookings.php">Bookings</a>
+                    </li>
+                    <li>
+                        <a href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
       <p><br /></p>
         <div class="container">
-          <h1>MyTable</h1>
+          <br />
+          <br />
+          <h2><center>Meeting Room Bookings</center></h2>
+          <br />
             <table class="table table-striped table-bordered table-hover" id="mydata">
               <thead>
                 <tr>
-                  <td>ID</td>
                   <td>Name</td>
                   <td>Email</td>
-                  <td>Phone</td>
-                  <td>Address</td>
+                  <td>Subject</td>
+                  <td>Date</td>
+                  <td>Time</td>
+                  <td>Message</td>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>2</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>3</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>4</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>5</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>6</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>7</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>8</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>9</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>1</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>2</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>3</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>4</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>5</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>6</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>7</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>8</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
-                <tr><td>9</td><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>0862369825</td><td>32 skerries</td></tr>
+                <tr><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>GRoupschemes</td><td>12/04/2017</td><td>20:17</td><td>Me Myself and i are going to the meeting room so we can meet with people and talk shite</td></tr>
+                <tr><td>John</td><td>Robbiejenkinson@gmail.com</td><td>GRoupschemes</td><td>12/03/2017</td><td>20:17</td><td>Me Myself and i are going to the meeting room so we can meet with people and talk shite</td></tr>
+                <tr><td>Paul</td><td>Robbiejenkinson@gmail.com</td><td>GRoupschemes</td><td>12/07/2017</td><td>20:17</td><td></td></tr>
+                <tr><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>GRoupschemes</td><td>12/03/2017</td><td>20:17</td><td>Me Myself and i are going to the meeting room so we can meet with people and talk shite Me Myself and i are going to the meeting room so we can meet with people and talk shite Me Myself and i are going to the meeting room so we can meet with people and talk shite</td></tr>
 
               </tbody>
             </table>
