@@ -2,7 +2,7 @@
 
 
 require 'DB/bookingSQL.php';
-
+require 'DB/dbconnect.php';
 
  ?>
 
@@ -72,6 +72,7 @@ require 'DB/bookingSQL.php';
             <table class="table table-striped table-bordered table-hover" id="mydata">
               <thead>
                 <tr>
+                  <td>ID</td>
                   <td>Name</td>
                   <td>Email</td>
                   <td>Subject</td>
@@ -81,11 +82,25 @@ require 'DB/bookingSQL.php';
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>GRoupschemes</td><td>12/04/2017</td><td>20:17</td><td>Me Myself and i are going to the meeting room so we can meet with people and talk shite</td></tr>
-                <tr><td>John</td><td>Robbiejenkinson@gmail.com</td><td>GRoupschemes</td><td>12/03/2017</td><td>20:17</td><td>Me Myself and i are going to the meeting room so we can meet with people and talk shite</td></tr>
-                <tr><td>Paul</td><td>Robbiejenkinson@gmail.com</td><td>GRoupschemes</td><td>12/07/2017</td><td>20:17</td><td></td></tr>
-                <tr><td>Robbie</td><td>Robbiejenkinson@gmail.com</td><td>GRoupschemes</td><td>12/03/2017</td><td>20:17</td><td>Me Myself and i are going to the meeting room so we can meet with people and talk shite Me Myself and i are going to the meeting room so we can meet with people and talk shite Me Myself and i are going to the meeting room so we can meet with people and talk shite</td></tr>
+                <?php
 
+                  $execItems = $connection->query("SELECT ID, name, subject, email, date1, time1, message FROM users WHERE date1 > NOW()");
+
+                    while($infoItems = $execItems->fetch_array()){
+                        echo    "
+                            <tr>
+                                <td>".$infoItems['ID']."</td>
+                                <td>".$infoItems['name']."</td>
+                                <td>".$infoItems['subject']."</td>
+                                <td>".$infoItems['email']."</td>
+                                <td>".$infoItems['date1']."</td>
+                                <td>".$infoItems['time1']."</td>
+                                <td>".$infoItems['message']."</td>
+                            </tr>
+                        ";
+
+                        }
+                ?>
               </tbody>
             </table>
 
@@ -99,7 +114,11 @@ require 'DB/bookingSQL.php';
     <script src="DataTables-1.10.13/DataTables-1.10.13/media/js/jquery.dataTables.min.js"></script>
     <script src="DataTables-1.10.13/DataTables-1.10.13/media/js/dataTables.bootstrap.min.js"></script>
     <script>
-      $('#mydata').dataTable();
+      $('#mydata').dataTable({
+        "order": [[4, 'asc']]
+      }
+
+      );
     </script>
   </body>
 </html>

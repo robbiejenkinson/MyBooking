@@ -85,6 +85,8 @@ require 'DB/bookingSQL.php';
             <div class="col-lg-12 text-center">
          <p>Thank you, <?=$_POST['name']?>!</p>
           <p>you have booked the Meeting room for <?=$_POST['time1']?>, on <?=$_POST['date1']?>.</p>
+          <br />
+          <p>Please navigate to the 'Bookings' page to view bookings</p>
             </div>
         </div>
         <!-- /.row -->
