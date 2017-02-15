@@ -134,6 +134,6 @@ input {
 }
 
 .table{
-  text-align: center;
+  align: center;
   width:80%;
 }
