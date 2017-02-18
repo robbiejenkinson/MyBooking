@@ -32,6 +32,8 @@ require 'DB/dbconnect.php';
 
     <script src="jquery-3.1.1.min.js"></script>
 
+    <script src="jquery-3.1.1.min.js"></script>
+
 
 
 </head>
@@ -133,7 +135,11 @@ require 'DB/dbconnect.php';
 
                           -->
 
+<<<<<<< HEAD
                             <input type="text" id="datetimepicker" class="form" name="datetime1" placeholder="Pick Date and time"/>
+=======
+                            <input type="text" id="datetimepicker" class="form" placeholder="Pick Date and time"/>
+>>>>>>> 0f408e070acf1fd823960c205c7e4b724f7d37b8
 
                         </div><!-- End Left Inputs -->
 
@@ -158,6 +164,19 @@ require 'DB/dbconnect.php';
 
 
   <script src="js/jquery.js"></script>
+<<<<<<< HEAD
+=======
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery.datetimepicker.full.js"></script>
+  <script>
+  $(document).ready(function(){
+    $(function() {
+      $('#datetimepicker').datetimepicker({'step':15});
+    });
+});
+>>>>>>> 0f408e070acf1fd823960c205c7e4b724f7d37b8
 
   <!-- Bootstrap Core JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -167,10 +186,13 @@ require 'DB/dbconnect.php';
     $(function() {
       $('#datetimepicker').datetimepicker({'step':15});
 
+<<<<<<< HEAD
     });
 });
 
 
+=======
+>>>>>>> 0f408e070acf1fd823960c205c7e4b724f7d37b8
 </script>
                 </div><!-- End Contact Form Area -->
             </div><!-- End Inner -->
