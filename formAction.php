@@ -20,6 +20,7 @@ require 'DB/bookingSQL.php';
 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/MyNavbar.css">
 
 
 
@@ -48,7 +49,7 @@ require 'DB/bookingSQL.php';
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbarNew navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -83,10 +84,14 @@ require 'DB/bookingSQL.php';
 
         <div class="row">
             <div class="col-lg-12 text-center">
-         <p>Thank you, <?=$_POST['name']?>!</p>
-          <p>you have booked the Meeting room for <?=$_POST['time1']?>, on <?=$_POST['date1']?>.</p>
-          <br />
-          <p>Please navigate to the 'Bookings' page to view bookings</p>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+         <p><h1>Thank you, <?=$_POST['name']?>!</h1></p>
+          <p><h2>You have booked the Meeting room for <?=date('d-m-Y  H:i', strtotime($_POST['datetime1']))?></h2></p>
+          <p><h3>Please navigate to the 'Bookings' page to view bookings</h3></p>
             </div>
         </div>
         <!-- /.row -->

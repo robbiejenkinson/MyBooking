@@ -21,6 +21,7 @@ require 'DB/dbconnect.php';
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="DataTables-1.10.13/DataTables-1.10.13/media/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/MyNavbar.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +32,7 @@ require 'DB/dbconnect.php';
   </head>
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbarNew navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -76,15 +77,14 @@ require 'DB/dbconnect.php';
                   <td>Name</td>
                   <td>Email</td>
                   <td>Subject</td>
-                  <td>Date</td>
-                  <td>Time</td>
+                  <td>DateTime</td>
                   <td>Message</td>
                 </tr>
               </thead>
               <tbody>
                 <?php
 
-                  $execItems = $connection->query("SELECT ID, name, subject, email, date1, time1, message FROM users WHERE date1 > NOW()");
+                  $execItems = $connection->query("SELECT ID, name, subject, email, datetime1, message FROM users WHERE datetime1 > NOW()");
 
                     while($infoItems = $execItems->fetch_array()){
                         echo    "
@@ -93,8 +93,7 @@ require 'DB/dbconnect.php';
                                 <td>".$infoItems['name']."</td>
                                 <td>".$infoItems['subject']."</td>
                                 <td>".$infoItems['email']."</td>
-                                <td>".$infoItems['date1']."</td>
-                                <td>".$infoItems['time1']."</td>
+                                <td>".date('d-m-Y  H:i', strtotime($infoItems['datetime1']))."</td>
                                 <td>".$infoItems['message']."</td>
                             </tr>
                         ";
@@ -115,7 +114,8 @@ require 'DB/dbconnect.php';
     <script src="DataTables-1.10.13/DataTables-1.10.13/media/js/dataTables.bootstrap.min.js"></script>
     <script>
       $('#mydata').dataTable({
-        "order": [[4, 'asc']]
+        "order": [[4, 'asc']],
+
       }
 
       );

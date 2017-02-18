@@ -1,4 +1,6 @@
 <?php
+
+
 require 'DB/dbconnect.php';
 
 
@@ -16,8 +18,19 @@ require 'DB/dbconnect.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.9/jquery.timepicker.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.9/jquery.timepicker.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.datetimepicker.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/MyNavbar.css">
+
+
+    <script src="jquery-3.1.1.min.js"></script>
 
 
 
@@ -30,6 +43,7 @@ require 'DB/dbconnect.php';
     <style>
     body {
         padding-top: 70px;
+        background-image: url("UntitledNew.jpg");
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
     </style>
@@ -46,7 +60,7 @@ require 'DB/dbconnect.php';
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbarNew  navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -78,6 +92,7 @@ require 'DB/dbconnect.php';
     </nav>
 
     <!-- Page Content -->
+  
     <div class="container">
 
         <div class="row">
@@ -93,10 +108,7 @@ require 'DB/dbconnect.php';
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
 <br />
 <div class="inner contact">
@@ -115,9 +127,13 @@ require 'DB/dbconnect.php';
                             <!-- Subject -->
                             <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject">
 
-                            <input type="date" name="date1" id="date" required="required" class="form">
+                          <!--  <input type="date" name="date1" id="date" required="required" class="form">
 
                             <input type="time" name="time1" id="time" required="required" class="form">
+
+                          -->
+
+                            <input type="text" id="datetimepicker" class="form" name="datetime1" placeholder="Pick Date and time"/>
 
                         </div><!-- End Left Inputs -->
 
@@ -141,11 +157,25 @@ require 'DB/dbconnect.php';
                     </form>
 
 
+  <script src="js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery.datetimepicker.full.js"></script>
+  <script>
+  $(document).ready(function(){
+    $(function() {
+      $('#datetimepicker').datetimepicker({'step':15});
+
+    });
+});
 
 
+</script>
                 </div><!-- End Contact Form Area -->
             </div><!-- End Inner -->
           </div>
+        </div>
 
 
 
