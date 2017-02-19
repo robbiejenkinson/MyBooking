@@ -94,7 +94,7 @@ require 'DB/dbconnect.php';
     </nav>
 
     <!-- Page Content -->
-  
+
     <div class="container">
 
         <div class="row">
@@ -135,11 +135,9 @@ require 'DB/dbconnect.php';
 
                           -->
 
-<<<<<<< HEAD
-                            <input type="text" id="datetimepicker" class="form" name="datetime1" placeholder="Pick Date and time"/>
-=======
+                          <input type="text" id="datetimepicker" class="form" name="datetime1" placeholder="Pick Date and time"/>
+
                             <input type="text" id="datetimepicker" class="form" placeholder="Pick Date and time"/>
->>>>>>> 0f408e070acf1fd823960c205c7e4b724f7d37b8
 
                         </div><!-- End Left Inputs -->
 
