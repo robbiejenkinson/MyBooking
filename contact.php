@@ -81,7 +81,7 @@
               <br />
                 <h1>Contact:</h1>
                 <p class="lead"><h2>To report a problem or issue, contact me at:</h2></p>
-                <p><h3>robbie.jenkinson@groupschemes</h3></p>
+                <p><h3>robbie.jenkinson@groupschemes.com</h3></p>
 
             </div>
         </div>
