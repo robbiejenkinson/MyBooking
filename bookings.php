@@ -77,14 +77,15 @@ require 'DB/dbconnect.php';
                   <td>Name</td>
                   <td>Email</td>
                   <td>Subject</td>
-                  <td>DateTime</td>
+                  <td>Time From:</td>
+                  <td>Time To:</td>
                   <td>Message</td>
                 </tr>
               </thead>
               <tbody>
                 <?php
 
-                  $execItems = $connection->query("SELECT ID, name, subject, email, datetime1, message FROM users WHERE datetime1 > NOW()");
+                  $execItems = $connection->query("SELECT ID, name, subject, email, datetime1, datetime2, message FROM users WHERE datetime1 > NOW()");
 
                     while($infoItems = $execItems->fetch_array()){
                         echo    "
@@ -93,7 +94,8 @@ require 'DB/dbconnect.php';
                                 <td>".$infoItems['name']."</td>
                                 <td>".$infoItems['subject']."</td>
                                 <td>".$infoItems['email']."</td>
-                                <td>".date('d-m-Y  H:i', strtotime($infoItems['datetime1']))."</td>
+                                <td>".date('H:i d-m-Y', strtotime($infoItems['datetime1']))."</td>
+                                <td>".date('H:i d-m-Y', strtotime($infoItems['datetime2']))."</td>
                                 <td>".$infoItems['message']."</td>
                             </tr>
                         ";

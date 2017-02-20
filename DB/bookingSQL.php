@@ -8,13 +8,14 @@ $Subject = ($_POST['subject']);
 $Name = ($_POST['name']);
 $Email = ($_POST['email']);
 $datetime1 = ($_POST['datetime1']);
+$datetime2 = ($_POST['datetime2']);
 $message = ($_POST['message']);
 
 
 
 
 
-$sql = "INSERT INTO users (subject,name,email,datetime1,message) VALUES ('$Subject','$Name','$Email','$datetime1','$message')";
+$sql = "INSERT INTO users (subject,name,email,datetime1,datetime2,message) VALUES ('$Subject','$Name','$Email','$datetime1','$datetime2','$message')";
 
 
 if (!mysqli_query($connection,$sql)) {

@@ -32,7 +32,7 @@ require 'DB/dbconnect.php';
 
     <script src="jquery-3.1.1.min.js"></script>
 
-    
+
 
 
 
@@ -129,13 +129,9 @@ require 'DB/dbconnect.php';
                             <!-- Subject -->
                             <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject">
 
-                          <!--  <input type="date" name="date1" id="date" required="required" class="form">
+                            <input type="text" id="datetimepicker" class="form" name="datetime1" placeholder="Pick Date and time From:"/>
 
-                            <input type="time" name="time1" id="time" required="required" class="form">
-
-                          -->
-
-                          <input type="text" id="datetimepicker" class="form" name="datetime1" placeholder="Pick Date and time"/>
+                            <input type="text" id="datetimepicker1" class="form" name="datetime2" placeholder="Pick Date and time To:"/>
 
                         </div><!-- End Left Inputs -->
 
@@ -169,6 +165,12 @@ require 'DB/dbconnect.php';
     $(function() {
       $('#datetimepicker').datetimepicker({'step':15});
     });
+});
+
+$(document).ready(function(){
+  $(function() {
+    $('#datetimepicker1').datetimepicker({'step':15});
+  });
 });
 
 
